@@ -1,0 +1,95 @@
+/* src/assets/main.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --eco-green-dark: #2d6a4f;
+  --eco-green-mid: #40916c;
+  --eco-green-light: #52b788;
+  --eco-blue: #48cae4;
+  --eco-earth-tone: #b08968;
+  --eco-background: #f8f9fa;
+  --eco-text: #343a40;
+  --eco-xp-color: #ffc107;
+  --eco-streak-color: #fd7e14;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--eco-background);
+  color: var(--eco-text);
+}
+
+.eco-brand-text {
+  color: var(--eco-green-dark);
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: var(--eco-green-mid);
+  border-color: var(--eco-green-mid);
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--eco-green-dark);
+  border-color: var(--eco-green-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+  border-color: var(--eco-green-mid);
+  color: var(--eco-green-mid);
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.progress-bar {
+    background-color: var(--eco-green-light);
+}
+
+.streak-flame {
+    color: var(--eco-streak-color);
+    font-size: 1.2rem;
+}
+
+/* XP Pop-up Animation */
+.xp-popup {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: var(--eco-xp-color);
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  animation: fadeUpAndOut 2s ease-in-out forwards;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes fadeUpAndOut {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-50px); opacity: 0; }
+}
+
+/* Custom class to highlight user on leaderboards */
+.user-highlight {
+    background-color: #e9f5ee !important;
+    border-left: 4px solid var(--eco-green-light);
+}

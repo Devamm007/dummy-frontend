@@ -1,11 +1,14 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div id="app-container">
+    <router-view />
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+</script>
+
+<style>
+#app-container {
+  padding-bottom: 80px; /* Space for bottom nav on mobile */
+}
+</style>
